@@ -1,13 +1,105 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.listNews {
+  padding: 15px 15px;
+  border: solid #ededed;
+  border-width: 1px 0 0;
+  font-size: 20px;
+  padding-left: 15px;
+}
+
+.header {
+  background: #fc7127;
+  width: 100%;
+  height: 285px;
+}
+
+.logo {
+  background-image: url('./images/HN_Wave_logo_72.png');
+  background-repeat: no-repeat;
+  height: 285px;
+  width: 285px;
+  margin: auto;
+}
+
+.inputPage {
+  height: 50px;
+  padding: 5px;
+  font-size: 20px;
+  font-style: italic;
+  border: none;
+  background: #efefef;
+  border-radius: 15px;
+  outline: none;
+}
+
+.button {
+  height: 60px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fc7127;
+  background-color: #006a4e;
+  border-radius: 12px;
+}
+
+.button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  opacity: 0.3;
+
+}
+
+.newsList {
+  width: 60%;
+  margin: auto;
+  text-align: left;
+}
+
+.titleUrl {
+  text-decoration: none;
+  color: blue;
+}
+
+.newsInfo {
+  font-size: 12px;
+}
+
+.nameBy {
+  color: #fc7127;
+  font-weight: bold;
+}
+
+.detailBtn {
+  border: none;
+  background: white;
+  outline: white;
+  color: rgb(10, 113, 161);
+  cursor: pointer;
+}
+
+.linkDetail:hover {
+  color: rgb(33, 126, 38);
+}
+
+.linkDetail {
+  text-decoration: none;
+  color: rgb(10, 113, 161);
+}
+
+.detail {
+  text-align: left;
 }
