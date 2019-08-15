@@ -14,3 +14,8 @@ export const isLoading = loading => ({
   type: action.IS_LOADING,
   loading
 });
+
+export const isAuth = auth => ({
+  type: action.IS_AUTH,
+  auth
+});

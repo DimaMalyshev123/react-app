@@ -1,9 +1,5 @@
-import { setCurrentPage, setListNews, isLoading } from '../actions/index';
+import { setListNews, isLoading } from '../actions/index';
 
-//=>
-//dispatch
-//promise
-//refactor code
 export const getNews = async res => {
   let news = [];
 
@@ -19,8 +15,6 @@ export const getNews = async res => {
 
   return news;
 };
-
-export const test = async () => {};
 
 export const getContent = page => {
   return async dispatch => {

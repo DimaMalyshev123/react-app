@@ -103,3 +103,7 @@ code {
 .detail {
   text-align: left;
 }
+
+.inputForm {
+  margin: 10px;
+}

@@ -1,16 +1,13 @@
 import React from 'react';
-import { useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import SearchPage from './SearchPage';
 import { getContent } from '../api/getContents';
 import { NewsRender } from './NewsRender';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 
 const ListNews = props => {
-  useEffect(() => {
-    renderList();
-  }, []);
-
   const callBackNews = useCallback(() => {
     return props.listNews;
   }, [props.isLoading]);
@@ -22,6 +19,7 @@ const ListNews = props => {
 
   return (
     <div>
+      {props.isAuth ? null : <Redirect to='/signin' />}
       <p>Current page value: {props.currentPage} </p>
       <SearchPage onClick={renderList} disabled={props.isLoading} />
       <NewsRender news={callBackNews()} />
@@ -41,7 +39,8 @@ const mapStateToProps = state => {
   return {
     currentPage: state.currentPage,
     listNews: state.listNews,
-    isLoading: state.isLoading
+    isLoading: state.isLoading,
+    isAuth: state.isAuth
   };
 };
 
